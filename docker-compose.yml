@@ -1,0 +1,20 @@
+version: '2'
+services:
+  db:
+    image: datagrip/hsqldb:2.3.3
+    environment:
+      - HSQLDB_DATABASE_ALIAS=leto
+      - HSQLDB_USER=sa
+      - HSQLDB_PASSWORD=
+    networks:
+      - leto
+  web:
+    image: leto
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - leto
+networks:
+  leto:

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/core/com.leto.server.app-core.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/core/com.leto.server.app-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/core/com.leto.server.app-core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/core/com.leto.server.app-core.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/core/com.leto.server.app-core.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/core/com.leto.server.app-core.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/global/com.leto.server.app-global.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/global/com.leto.server.app-global.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/global/com.leto.server.app-global.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/global/com.leto.server.app-global.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/global/com.leto.server.app-global.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/global/com.leto.server.app-global.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/com.leto.server.app-web.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/com.leto.server.app-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/com.leto.server.app-web.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/com.leto.server.app-web.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/com.leto.server.app-web.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/com.leto.server.app-web.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.leto.server.leto.iml" filepath="$PROJECT_DIR$/.idea/modules/com.leto.server.leto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/core/core.iml" filepath="$PROJECT_DIR$/modules/core/core.iml" />
+    </modules>
+  </component>
+</project>
