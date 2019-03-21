@@ -9,7 +9,7 @@ services:
     networks:
       - leto
   web:
-    image: leto
+    image: leto:latest
     ports:
       - "8080:8080"
     depends_on:
