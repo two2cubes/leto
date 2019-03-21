@@ -2,10 +2,10 @@ steps:
   - name: 'gcr.io/cloud-builders/gradle'
     args: ['buildUberJar']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'eu.gcr.io/$PROJECT_ID/leto:latest', '.']
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/leto:latest', '.']
     timeout: 600s
   - name: 'docker/compose:1.15.0'
     args: ['up', '-d']
     env:
       - 'PROJECT_ID=$PROJECT_ID'
-images: ['eu.gcr.io/$PROJECT_ID/leto:latest']
+images: ['gcr.io/$PROJECT_ID/leto:latest']
