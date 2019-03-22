@@ -4,9 +4,4 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/leto:latest', '.']
     timeout: 600s
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/$PROJECT_ID/leto:latest']
-    timeout: 600s
-  - name: 'docker/compose:1.19.0'
-    args: ['up', '-d']
 images: ['gcr.io/$PROJECT_ID/leto-app:latest']
