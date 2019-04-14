@@ -1,0 +1,2 @@
+alter table LETO_ORDER_LINE add constraint FK_LETO_ORDER_LINE_ON_PRODUCT foreign key (PRODUCT_ID) references LETO_PRODUCT(ID);
+create index IDX_LETO_ORDER_LINE_ON_PRODUCT on LETO_ORDER_LINE (PRODUCT_ID);

@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
-    <menu id="application-app" insertBefore="administration">
+    <menu id="application-app"
+          insertBefore="administration">
+        <item id="leto$Customer.browse"
+              screen="leto$Customer.browse"/>
+        <item id="leto$Product.browse"
+              screen="leto$Product.browse"/>
+        <item id="leto$Order.browse"
+              screen="leto$Order.browse"/>
+        <item id="leto$City.browse"
+              screen="leto$City.browse"/>
+        <item id="leto$Country.browse"
+              screen="leto$Country.browse"/>
     </menu>
 </menu-config>

@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
-
+    <view entity="leto$OrderLine" name="orderLine-with-product" extends="_local">
+        <property name="product" view="_local"/>
+    </view>
+    <view entity="leto$Order" name="order-with-customer" extends="_local">
+        <property name="customer" view="_minimal"/>
+    </view>
+    <view entity="leto$Order" name="order-edit" extends="_local">
+        <property name="customer" view="_minimal"/>
+        <property name="lines" view="orderLine-with-product"/>
+    </view>
+    <view entity="leto$Customer" name="customer-view" extends="_local">
+        <property name="address" view="address-view"/>
+    </view>
+    <view entity="leto$Address" name="address-view" extends="_local">
+        <property name="city" view="_local"/>
+    </view>
 </views>

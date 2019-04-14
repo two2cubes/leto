@@ -10,5 +10,12 @@
     <context:component-scan base-package="com.leto.server"/>
 
     <gui:screens base-packages="com.leto.server.web"/>
+    <bean class="com.haulmont.cuba.web.sys.remoting.WebRemoteProxyBeanCreator">
+        <property name="remoteServices">
+            <map>
+                <entry key="leto_RegistrationService" value="com.leto.server.service.RegistrationService"/>
+            </map>
+        </property>
+    </bean>
 
 </beans>

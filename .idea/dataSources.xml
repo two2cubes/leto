@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Main Datasource" uuid="25597faf-ac02-4cb2-8bbe-ba0d0e2a2f44">
-      <driver-ref>hsqldb.remote</driver-ref>
+    <data-source source="LOCAL" name="postgres@localhost" uuid="c78ae833-fa98-4691-a156-3081e2d3ca8a">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <imported>true</imported>
-      <jdbc-driver>org.hsqldb.jdbcDriver</jdbc-driver>
-      <jdbc-url>jdbc:hsqldb:hsql://localhost/leto</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
     </data-source>
   </component>
 </project>

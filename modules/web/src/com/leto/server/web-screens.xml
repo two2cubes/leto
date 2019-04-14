@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
-
+    <screen id="loginWindow"
+            template="com/leto/server/web/screens/ext-loginWindow.xml"/>
+    <screen id="register-screen"
+            template="com/leto/server/web/register/register-screen.xml"/>
+    <screen id="restore-password-screen"
+            template="com/leto/server/web/restorepassword/restore-password-screen.xml"/>
 </screen-config>

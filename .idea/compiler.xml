@@ -6,8 +6,18 @@
       <module name="com.leto.server.app-core.test" target="1.8" />
       <module name="com.leto.server.app-global.main" target="1.8" />
       <module name="com.leto.server.app-global.test" target="1.8" />
+      <module name="com.leto.server.app-web-themes.main" target="1.8" />
+      <module name="com.leto.server.app-web-themes.test" target="1.8" />
       <module name="com.leto.server.app-web.main" target="1.8" />
       <module name="com.leto.server.app-web.test" target="1.8" />
+      <module name="leto.app-core.main" target="1.8" />
+      <module name="leto.app-core.test" target="1.8" />
+      <module name="leto.app-global.main" target="1.8" />
+      <module name="leto.app-global.test" target="1.8" />
+      <module name="leto.app-web-themes.main" target="1.8" />
+      <module name="leto.app-web-themes.test" target="1.8" />
+      <module name="leto.app-web.main" target="1.8" />
+      <module name="leto.app-web.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

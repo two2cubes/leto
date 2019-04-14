@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
-    <persistence-unit name="leto" transaction-type="RESOURCE_LOCAL">
-
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             version="2.0">
+    <persistence-unit name="leto"
+                      transaction-type="RESOURCE_LOCAL">
+        <class>com.leto.server.entity.Company</class>
+        <class>com.leto.server.entity.Customer</class>
+        <class>com.leto.server.entity.Order</class>
+        <class>com.leto.server.entity.Product</class>
+        <class>com.leto.server.entity.OrderLine</class>
+        <class>com.leto.server.entity.Address</class>
+        <class>com.leto.server.entity.City</class>
+        <class>com.leto.server.entity.Country</class>
     </persistence-unit>
 </persistence>

@@ -9,10 +9,25 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/global/com.leto.server.app-global.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/global/com.leto.server.app-global.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/global/com.leto.server.app-global.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/global/com.leto.server.app-global.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/com.leto.server.app-web.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/com.leto.server.app-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/themes/com.leto.server.app-web-themes.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/themes/com.leto.server.app-web-themes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/themes/com.leto.server.app-web-themes.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/themes/com.leto.server.app-web-themes.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/themes/com.leto.server.app-web-themes.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/themes/com.leto.server.app-web-themes.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/com.leto.server.app-web.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/com.leto.server.app-web.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/com.leto.server.app-web.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/com.leto.server.app-web.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.leto.server.leto.iml" filepath="$PROJECT_DIR$/.idea/modules/com.leto.server.leto.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/core/core.iml" filepath="$PROJECT_DIR$/modules/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/core/leto.app-core.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/core/leto.app-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/core/leto.app-core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/core/leto.app-core.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/core/leto.app-core.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/core/leto.app-core.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/global/leto.app-global.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/global/leto.app-global.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/global/leto.app-global.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/global/leto.app-global.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/global/leto.app-global.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/global/leto.app-global.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/leto.app-web.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/leto.app-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/themes/leto.app-web-themes.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/themes/leto.app-web-themes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/themes/leto.app-web-themes.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/themes/leto.app-web-themes.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/themes/leto.app-web-themes.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/themes/leto.app-web-themes.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/leto.app-web.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/leto.app-web.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/leto.app-web.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/leto.app-web.test.iml" />
     </modules>
   </component>
 </project>
