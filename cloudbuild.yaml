@@ -7,6 +7,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/leto:latest']
     timeout: 600s
-  - name: 'docker/compose:1.19.0'
-    args: ['up', '-d']
-images: ['gcr.io/$PROJECT_ID/leto-app:latest']
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: [ 'beta', 'compute', 'instance-groups', 'managed', 'rolling-action', 'restart', 'app-server-group', '--zone=europe-west2-c' ]
+images:
+  - 'gcr.io/$PROJECT_ID/leto-app:latest'
