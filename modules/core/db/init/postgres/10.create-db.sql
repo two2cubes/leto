@@ -1,42 +1,3 @@
-create table LETO_COMPANY (
-    ID uuid not null,
-    VERSION integer not null,
-    CREATE_TS timestamp,
-    CREATED_BY varchar(50),
-    UPDATE_TS timestamp,
-    UPDATED_BY varchar(50),
-    DELETE_TS timestamp,
-    DELETED_BY varchar(50),
-    -- TODO add your columns here
-    primary key (ID)
-)^
-create table LETO_CUSTOMER (
-    ID uuid not null,
-    VERSION integer not null,
-    CREATE_TS timestamp,
-    CREATED_BY varchar(50),
-    UPDATE_TS timestamp,
-    UPDATED_BY varchar(50),
-    DELETE_TS timestamp,
-    DELETED_BY varchar(50),
-    -- TODO add your columns here
-    primary key (ID)
-)^
-
--- begin LETO_COMPANY
-create table LETO_COMPANY (
-    ID uuid,
-    VERSION integer not null,
-    CREATE_TS timestamp,
-    CREATED_BY varchar(50),
-    UPDATE_TS timestamp,
-    UPDATED_BY varchar(50),
-    DELETE_TS timestamp,
-    DELETED_BY varchar(50),
-    --
-    primary key (ID)
-)^
--- end LETO_COMPANY
 -- begin LETO_CUSTOMER
 create table LETO_CUSTOMER (
     ID uuid,
@@ -58,8 +19,9 @@ create table LETO_CUSTOMER (
     primary key (ID)
 )^
 -- end LETO_CUSTOMER
-create table LETO_ORDER (
-    ID uuid not null,
+-- begin LETO_COUNTRY
+create table LETO_COUNTRY (
+    ID uuid,
     VERSION integer not null,
     CREATE_TS timestamp,
     CREATED_BY varchar(50),
@@ -67,10 +29,15 @@ create table LETO_ORDER (
     UPDATED_BY varchar(50),
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
-    -- TODO add your columns here
+    --
+    CODE varchar(255) not null,
+    CODE_ISO varchar(255),
+    DOMAIN varchar(255),
+    NAME varchar(255) not null,
+    --
     primary key (ID)
 )^
-
+-- end LETO_COUNTRY
 -- begin LETO_ORDER
 create table LETO_ORDER (
     ID uuid,
@@ -89,19 +56,6 @@ create table LETO_ORDER (
     primary key (ID)
 )^
 -- end LETO_ORDER
-create table LETO_PRODUCT (
-    ID uuid not null,
-    VERSION integer not null,
-    CREATE_TS timestamp,
-    CREATED_BY varchar(50),
-    UPDATE_TS timestamp,
-    UPDATED_BY varchar(50),
-    DELETE_TS timestamp,
-    DELETED_BY varchar(50),
-    -- TODO add your columns here
-    primary key (ID)
-)^
-
 -- begin LETO_PRODUCT
 create table LETO_PRODUCT (
     ID uuid,
@@ -119,8 +73,9 @@ create table LETO_PRODUCT (
     primary key (ID)
 )^
 -- end LETO_PRODUCT
-create table LETO_ORDER_LINE (
-    ID uuid not null,
+-- begin LETO_CITY
+create table LETO_CITY (
+    ID uuid,
     VERSION integer not null,
     CREATE_TS timestamp,
     CREATED_BY varchar(50),
@@ -128,10 +83,12 @@ create table LETO_ORDER_LINE (
     UPDATED_BY varchar(50),
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
-    -- TODO add your columns here
+    --
+    NAME varchar(255) not null,
+    --
     primary key (ID)
 )^
-
+-- end LETO_CITY
 -- begin LETO_ORDER_LINE
 create table LETO_ORDER_LINE (
     ID uuid,
@@ -150,21 +107,8 @@ create table LETO_ORDER_LINE (
     primary key (ID)
 )^
 -- end LETO_ORDER_LINE
-create table LETO_CITY (
-    ID uuid not null,
-    VERSION integer not null,
-    CREATE_TS timestamp,
-    CREATED_BY varchar(50),
-    UPDATE_TS timestamp,
-    UPDATED_BY varchar(50),
-    DELETE_TS timestamp,
-    DELETED_BY varchar(50),
-    -- TODO add your columns here
-    primary key (ID)
-)^
-
--- begin LETO_CITY
-create table LETO_CITY (
+-- begin LETO_COMPANY
+create table LETO_COMPANY (
     ID uuid,
     VERSION integer not null,
     CREATE_TS timestamp,
@@ -174,39 +118,6 @@ create table LETO_CITY (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     --
-    NAME varchar(255) not null,
-    --
     primary key (ID)
 )^
--- end LETO_CITY
-create table LETO_COUNTRY (
-    ID uuid not null,
-    VERSION integer not null,
-    CREATE_TS timestamp,
-    CREATED_BY varchar(50),
-    UPDATE_TS timestamp,
-    UPDATED_BY varchar(50),
-    DELETE_TS timestamp,
-    DELETED_BY varchar(50),
-    -- TODO add your columns here
-    primary key (ID)
-)^
-
--- begin LETO_COUNTRY
-create table LETO_COUNTRY (
-    ID uuid,
-    VERSION integer not null,
-    CREATE_TS timestamp,
-    CREATED_BY varchar(50),
-    UPDATE_TS timestamp,
-    UPDATED_BY varchar(50),
-    DELETE_TS timestamp,
-    DELETED_BY varchar(50),
-    --
-    CODE varchar(255),
-    DOMAIN varchar(255),
-    name varchar(255) not null,
-    --
-    primary key (ID)
-)^
--- end LETO_COUNTRY
+-- end LETO_COMPANY

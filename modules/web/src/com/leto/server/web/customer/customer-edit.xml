@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="com.leto.server.web.customer">
+    <data>
+        <instance id="customerDc"
+                  class="com.leto.server.entity.Customer"
+                  view="customer-view">
+            <loader/>
+        </instance>
+        <collection id="orderDc"
+                    class="com.leto.server.entity.Order"
+                    view="_local">
+            <loader id="ordersDl">
+                <query><![CDATA[select o from leto$Order o where o.customer = :customer order by o.date]]></query>
+            </loader>
+        </collection>
+        <collection id="citesDc"
+                    class="com.leto.server.entity.City"
+                    view="_base">
+            <loader id="citiesDl">
+                <query><![CDATA[select c from leto$City c order by c.name]]></query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions"
+            spacing="true">
+        <form id="form"
+              dataContainer="customerDc">
+            <column width="250px">
+                <textField property="name"/>
+                <textField property="email"/>
+                <textField property="address.street"/>
+                <lookupPickerField property="address.city" optionsContainer="citesDc"/>
+                <textField property="address.country"/>
+            </column>
+        </form>
+        <label value="msg://Orders"/>
+        <table id="ordersTable"
+               dataContainer="orderDc"
+               height="200px"
+               width="300px">
+            <columns>
+                <column id="date"/>
+                <column id="amount"/>
+            </columns>
+            <rows/>
+        </table>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>
+

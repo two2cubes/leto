@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="com.leto.server.web.order">
+    <data>
+        <instance id="orderDc"
+                  class="com.leto.server.entity.Order"
+                  view="order-edit">
+            <loader/>
+            <collection id="linesDc" property="lines"/>
+        </instance>
+        <collection id="customersDc" class="com.leto.server.entity.Customer" view="_minimal">
+            <loader>
+                <query><![CDATA[select e from leto$Customer e]]></query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions"
+            spacing="true">
+        <form id="form" dataContainer="orderDc">
+            <column width="250px">
+                <dateField property="date"/>
+                <textField property="amount"/>
+                <lookupPickerField property="customer"
+                                   optionsContainer="customersDc"/>
+            </column>
+        </form>
+        <groupBox id="linesBox" caption="msg://Lines">
+            <groupTable id="linesTable"
+                        dataContainer="linesDc"
+                        width="100%"
+                        height="300px">
+                <actions>
+                    <action id="create" type="create" openType="DIALOG"/>
+                    <action id="edit" type="edit" openType="DIALOG"/>
+                    <action id="remove" type="remove"/>
+                </actions>
+                <columns>
+                    <column id="product.name"/>
+                    <column id="product.price"/>
+                    <column id="quantity"/>
+                </columns>
+                <rows/>
+                <buttonsPanel>
+                    <button action="linesTable.create"/>
+                    <button action="linesTable.edit"/>
+                    <button action="linesTable.remove"/>
+                </buttonsPanel>
+            </groupTable>
+        </groupBox>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>
+

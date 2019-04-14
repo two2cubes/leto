@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="com.leto.server.web.orderline">
+    <data>
+        <instance id="orderlineDc"
+                  class="com.leto.server.entity.OrderLine"
+                  view="orderLine-with-product">
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions"
+            spacing="true">
+        <form id="form" dataContainer="orderlineDc">
+            <column width="250px">
+                <lookupPickerField property="product"/>
+                <textField property="quantity"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

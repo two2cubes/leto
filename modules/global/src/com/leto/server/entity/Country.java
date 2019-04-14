@@ -13,13 +13,16 @@ import javax.persistence.Table;
 public class Country extends StandardEntity {
     private static final long serialVersionUID = 6323743611817286101L;
 
-    @Column(name = "CODE")
+    @Column(name = "CODE", nullable = false, unique = true)
     protected String code;
+
+    @Column(name = "CODE_ISO")
+    protected String codeIso;
 
     @Column(name = "DOMAIN")
     protected String domain;
 
-    @Column(name = "name", nullable = false, unique = true)
+    @Column(name = "NAME", nullable = false, unique = true)
     protected String name;
 
     public String getCode() {
@@ -44,5 +47,13 @@ public class Country extends StandardEntity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getCodeIso() {
+        return codeIso;
+    }
+
+    public void setCodeIso(String codeIso) {
+        this.codeIso = codeIso;
     }
 }
