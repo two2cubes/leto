@@ -15,6 +15,7 @@ create table LETO_CUSTOMER (
     --
     NAME varchar(255) not null,
     EMAIL varchar(255),
+    PHONE varchar(255),
     --
     primary key (ID)
 )^

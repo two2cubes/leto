@@ -3,6 +3,7 @@ package com.leto.server.entity;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.cuba.core.entity.annotation.EmbeddedParameters;
+import com.leto.server.validation.Email;
 
 import javax.persistence.Column;
 import javax.persistence.Embedded;
@@ -19,11 +20,15 @@ public class Customer extends StandardEntity {
     protected String name;
 
     @Column(name = "EMAIL")
+    @Email
     protected String email;
 
     @Embedded
     @EmbeddedParameters(nullAllowed = false)
     protected Address address;
+
+    @Column(name = "PHONE")
+    protected String phone;
 
     public String getName() {
         return name;
@@ -47,5 +52,13 @@ public class Customer extends StandardEntity {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

@@ -52,6 +52,7 @@
             <column width="250px">
                 <textField property="name"/>
                 <textField property="email"/>
+                <maskedField id="phoneFld" property="phone" mask="(###)###-##-##" valueMode="masked"/>
                 <lookupField id="countryFld" property="address.country" optionsContainer="countryDc"/>
                 <lookupField id="cityFld" property="address.city" optionsContainer="citesDc"/>
                 <textField property="address.street"/>

@@ -2,6 +2,8 @@ package com.leto.server.entity;
 
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
+import com.haulmont.cuba.core.entity.annotation.CaseConversion;
+import com.haulmont.cuba.core.entity.annotation.ConversionType;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,12 +15,15 @@ import javax.persistence.Table;
 public class Country extends StandardEntity {
     private static final long serialVersionUID = 6323743611817286101L;
 
-    @Column(name = "CODE", nullable = false, unique = true)
+    @CaseConversion(type = ConversionType.UPPER)
+    @Column(name = "CODE", nullable = false, unique = true, length = 2)
     protected String code;
 
-    @Column(name = "CODE_ISO")
+    @CaseConversion(type = ConversionType.UPPER)
+    @Column(name = "CODE_ISO", length = 2)
     protected String codeIso;
 
+    @CaseConversion(type = ConversionType.LOWER)
     @Column(name = "DOMAIN")
     protected String domain;
 
