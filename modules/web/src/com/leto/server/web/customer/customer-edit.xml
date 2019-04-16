@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
         caption="msg://editorCaption"
         focusComponent="form"
         messagesPack="com.leto.server.web.customer">
@@ -18,9 +19,27 @@
         </collection>
         <collection id="citesDc"
                     class="com.leto.server.entity.City"
-                    view="_base">
+                    view="_local">
             <loader id="citiesDl">
-                <query><![CDATA[select c from leto$City c order by c.name]]></query>
+                <query>
+                    <![CDATA[select c from leto$City c]]>
+                    <condition>
+                        <and>
+                            <c:jpql>
+                                <c:where>c.country = :country</c:where>
+                            </c:jpql>
+                        </and>
+                    </condition>
+                </query>
+            </loader>
+        </collection>
+        <collection id="countryDc"
+                    class="com.leto.server.entity.Country"
+                    view="_local">
+            <loader>
+                <query>
+                    <![CDATA[select c from leto$Country c order by c.name]]>
+                </query>
             </loader>
         </collection>
     </data>
@@ -33,9 +52,9 @@
             <column width="250px">
                 <textField property="name"/>
                 <textField property="email"/>
+                <lookupField id="countryFld" property="address.country" optionsContainer="countryDc"/>
+                <lookupField id="cityFld" property="address.city" optionsContainer="citesDc"/>
                 <textField property="address.street"/>
-                <lookupPickerField property="address.city" optionsContainer="citesDc"/>
-                <textField property="address.country"/>
             </column>
         </form>
         <label value="msg://Orders"/>

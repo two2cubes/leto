@@ -6,7 +6,7 @@
     <data readOnly="true">
         <collection id="citysDc"
                          class="com.leto.server.entity.City"
-                         view="_local">
+                         view="city-view">
             <loader id="citysDl">
                 <query>
                     <![CDATA[select e from leto$City e]]>
@@ -33,6 +33,7 @@
             </actions>
             <columns>
                 <column id="name"/>
+                <column id="country"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

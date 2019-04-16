@@ -11,7 +11,7 @@ create table LETO_CUSTOMER (
     --
     STREET varchar(255),
     CITY_ID uuid,
-    COUNTRY varchar(255),
+    COUNTRY_ID uuid,
     --
     NAME varchar(255) not null,
     EMAIL varchar(255),
@@ -85,6 +85,7 @@ create table LETO_CITY (
     DELETED_BY varchar(50),
     --
     NAME varchar(255) not null,
+    COUNTRY_ID uuid,
     --
     primary key (ID)
 )^

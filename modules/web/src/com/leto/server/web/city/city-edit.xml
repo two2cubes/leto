@@ -6,9 +6,16 @@
     <data>
         <instance id="cityDc"
                   class="com.leto.server.entity.City"
-                  view="_local">
+                  view="city-view">
             <loader/>
         </instance>
+        <collection id="countryDc" class="com.leto.server.entity.Country" view="_local">
+            <loader>
+                <query>
+                    <![CDATA[select c from leto$Country c order by c.name]]>
+                </query>
+            </loader>
+        </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
@@ -17,6 +24,7 @@
         <form id="form" dataContainer="cityDc">
             <column width="250px">
                 <textField property="name"/>
+                <lookupField property="country" optionsContainer="countryDc"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

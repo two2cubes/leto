@@ -15,5 +15,9 @@
     </view>
     <view entity="leto$Address" name="address-view" extends="_local">
         <property name="city" view="_local"/>
+        <property name="country" view="_local"/>
+    </view>
+    <view entity="leto$City" name="city-view" extends="_local">
+        <property name="country" view="_local"/>
     </view>
 </views>

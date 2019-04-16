@@ -20,8 +20,10 @@ public class Address extends EmbeddableEntity {
     @JoinColumn(name = "CITY_ID")
     protected City city;
 
-    @Column(name = "COUNTRY")
-    protected String country;
+    @Lookup(type = LookupType.DROPDOWN)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "COUNTRY_ID")
+    protected Country country;
 
     public String getStreet() {
         return street;
@@ -39,11 +41,11 @@ public class Address extends EmbeddableEntity {
         this.city = city;
     }
 
-    public String getCountry() {
+    public Country getCountry() {
         return country;
     }
 
-    public void setCountry(String country) {
+    public void setCountry(Country country) {
         this.country = country;
     }
 }
